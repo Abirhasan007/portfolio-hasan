@@ -2405,6 +2405,55 @@
       }
     }
 
+
+    /* BCS lifetime membership highlight */
+    .bcs-membership {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 22px;
+      padding: 15px 20px;
+      border: 1px solid rgba(103, 216, 242, .42);
+      border-radius: 16px;
+      background: linear-gradient(115deg, rgba(139, 92, 246, .16), rgba(34, 211, 238, .08));
+      box-shadow: 0 10px 32px rgba(34, 211, 238, .08);
+      text-align: left;
+      max-width: 100%;
+    }
+    .bcs-membership-mark {
+      display: grid;
+      place-items: center;
+      flex: 0 0 44px;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      border: 1px solid rgba(167, 139, 250, .5);
+      background: rgba(139, 92, 246, .18);
+      color: #c4b5fd;
+      font-size: 19px;
+      font-weight: 800;
+    }
+    .bcs-membership-copy { display: grid; gap: 3px; }
+    .bcs-membership-label {
+      color: #b8c3dc;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    .bcs-membership-id {
+      color: #f7f8ff;
+      font-size: clamp(20px, 2.4vw, 27px);
+      line-height: 1.2;
+      font-weight: 800;
+      letter-spacing: .04em;
+    }
+    .bcs-membership-type { color: #67d8f2; font-size: 12px; font-weight: 600; }
+    @media(max-width:520px) {
+      .bcs-membership { padding: 13px 15px; gap: 11px; }
+      .bcs-membership-mark { width: 40px; height: 40px; flex-basis: 40px; }
+    }
+
   </style>
 </head>
 
@@ -2425,6 +2474,14 @@
         <p>Experienced IT professional with a strong background in network & server administration, IT support, cloud
           computing and a growing passion for cybersecurity.</p>
         <div class="hero-actions"><a class="btn" href="#contact">Contact Me ↗</a></div>
+        <div class="bcs-membership" aria-label="Bangladesh Computer Society lifetime membership">
+          <div class="bcs-membership-mark" aria-hidden="true">BCS</div>
+          <div class="bcs-membership-copy">
+            <span class="bcs-membership-label">Bangladesh Computer Society</span>
+            <strong class="bcs-membership-id">M02907</strong>
+            <span class="bcs-membership-type">Lifetime Member</span>
+          </div>
+        </div>
         <div class="hero-socials"><a href="https://www.linkedin.com/in/srhasanabir" target="_blank" rel="noreferrer"
             aria-label="LinkedIn">in</a><a href="mailto:aabirhasan9@gmail.com" aria-label="Email">mail</a></div>
       </div>
