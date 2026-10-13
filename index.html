@@ -2449,6 +2449,29 @@
       letter-spacing: .04em;
     }
     .bcs-membership-type { color: #67d8f2; font-size: 12px; font-weight: 600; }
+    .bcs-membership {
+      color: inherit;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+    }
+    .bcs-membership:hover {
+      transform: translateY(-3px);
+      border-color: rgba(103, 216, 242, .8);
+      box-shadow: 0 14px 38px rgba(34, 211, 238, .14);
+    }
+    .bcs-training-link {
+      display: inline-block;
+      margin-top: 5px;
+      color: #67d8f2;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .02em;
+    }
+    .bcs-membership:focus-visible {
+      outline: 2px solid #67d8f2;
+      outline-offset: 4px;
+    }
     @media(max-width:520px) {
       .bcs-membership { padding: 13px 15px; gap: 11px; }
       .bcs-membership-mark { width: 40px; height: 40px; flex-basis: 40px; }
@@ -2473,14 +2496,16 @@
         <p>Experienced IT professional with a strong background in network & server administration, IT support, cloud
           computing and a growing passion for cybersecurity.</p>
         <div class="hero-actions"><a class="btn" href="#contact">Contact Me ↗</a></div>
-        <div class="bcs-membership" aria-label="Bangladesh Computer Society lifetime membership">
+        <a class="bcs-membership" href="https://bcsbd.org.bd/member/dashboard/"
+          target="_blank" rel="noopener noreferrer"
+          aria-label="Open Bangladesh Computer Society training information in a new tab">
           <div class="bcs-membership-mark" aria-hidden="true">BCS</div>
           <div class="bcs-membership-copy">
             <span class="bcs-membership-label">Bangladesh Computer Society</span>
             <strong class="bcs-membership-id">M02907</strong>
             <span class="bcs-membership-type">Lifetime Member</span>
           </div>
-        </div>
+        </a>
         <div class="hero-socials"><a href="https://www.linkedin.com/in/srhasanabir" target="_blank" rel="noreferrer"
             aria-label="LinkedIn">in</a><a href="mailto:aabirhasan9@gmail.com" aria-label="Email">mail</a></div>
       </div>
