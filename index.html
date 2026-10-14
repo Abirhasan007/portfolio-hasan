@@ -552,16 +552,56 @@
 
     .cyber-grid {
       display: grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap: 14px
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: stretch;
+      gap: 16px;
+      margin-top: 22px
     }
 
     .cyber-panel {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
       border: 1px solid var(--line);
       border-radius: 17px;
-      padding: 27px;
+      padding: 23px;
       background: linear-gradient(145deg, rgba(39, 39, 42, .78), rgba(17, 17, 20, .72));
       backdrop-filter: blur(16px)
+    }
+
+    .cyber-panel p {
+      text-align: justify;
+      text-justify: inter-word;
+      overflow-wrap: anywhere;
+    }
+
+    .cyber-panel .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: auto;
+      padding-top: 16px;
+    }
+
+    .cyber-panel .cyber-list {
+      grid-template-columns: 1fr;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .cyber-panel .cyber-item {
+      display: block;
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+
+    .cyber-panel > .certificate-link {
+      align-self: flex-start;
+      margin-top: 14px;
+    }
+
+    @media (max-width: 1050px) {
+      .cyber-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
 
     .cyber-panel.featured {
@@ -599,24 +639,25 @@
     .certificate-link {
       display: inline-flex;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 7px;
-      margin-top: 18px;
-      padding: 10px 14px;
-      border: 1px solid rgba(125, 211, 252, .32);
-      border-radius: 10px;
-      color: #bae6fd;
-      background: rgba(14, 165, 233, .08);
+      gap: 5px;
+      margin-top: 12px;
+      padding: 3px 0;
+      border: 0;
+      border-bottom: 1px solid rgba(125, 211, 252, .28);
+      border-radius: 0;
+      color: #9ec9e8;
+      background: transparent;
       text-decoration: none;
-      font-size: .9rem;
-      transition: border-color .2s ease, background .2s ease, transform .2s ease;
+      font-size: 11px;
+      font-weight: 600;
+      line-height: 1.4;
+      transition: color .2s ease, border-color .2s ease;
     }
     .certificate-link:hover {
-      border-color: rgba(125, 211, 252, .7);
-      background: rgba(14, 165, 233, .14);
-      transform: translateY(-1px);
+      color: #67e8f9;
+      border-color: rgba(125, 211, 252, .75);
     }
-    .certificate-link small { color: #9ca3af; font-size: .75rem; }
+    .certificate-link small { color: #9ca3af; font-size: 10px; }
 
     .cyber-item strong {
       display: block;
@@ -642,13 +683,9 @@
     }
 
     @media(max-width:760px) {
-      .cyber-grid {
-        grid-template-columns: 1fr
-      }
-
-      .cyber-list {
-        grid-template-columns: 1fr
-      }
+      .cyber-grid { grid-template-columns: 1fr; gap: 12px; }
+      .cyber-panel { padding: 21px; }
+      .cyber-list { grid-template-columns: 1fr; }
     }
 
     \n.credentials {
@@ -2799,7 +2836,7 @@
             investigative security topics.</p>
           <div class="cyber-list">
             <a class="cyber-item" href="https://drive.google.com/file/d/1pBVcNIAzpLC7-7BetlqqiCbvMfefDk6V/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><strong>Memory forensics</strong><span>Investigation and analysis concepts · View certificate ↗</span></a>
-            <a class="cyber-item" href="https://drive.google.com/file/d/1RD6Q5X090ZCekycpnidDF0UZSU3f2Bv9/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><strong> Defending critical infrastructure in the digital era</strong><span>Security in the digital era ↗</span></a>
+            <a class="cyber-item" href="https://drive.google.com/file/d/1RD6Q5X090ZCekycpnidDF0UZSU3f2Bv9/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><strong> Defending critical infrastructure in the digital era</strong><span>Security awareness in the digital era ↗</span></a>
             <a class="cyber-item" href="https://drive.google.com/file/d/1D_KWLBra7_Rqv7w8Ifu1_Iw3iG9DAJpl/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><strong>Linux essentials</strong><span>Command-line and operating-system foundations  ↗</span></a>
 
             <a class="cyber-item" href="https://drive.google.com/file/d/1egXWXSR-swTdA5dV3x1YxgxEn_Ne7xpJ/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><strong>Cybersecurity and Ethical Hacking</strong> <strong>CoderTrust Bangladesh</strong>
@@ -2817,10 +2854,9 @@
           <p><strong style="color:#e4e4e7">Byte Capsule IT</strong> · 2025</p>
           <p style="margin-top:9px">Learning focus: web application security, penetration testing and reconnaissance.
           </p>
-          <div class="tags" style="margin-top:16px"><span>Web Application Security</span><span>Penetration
-              Testing</span><span>Reconnaissance</span></div>
+          <div class="tags" style="margin-top:16px"><span>Web Application Security</span><span>Penetration Testing</span><span>Reconnaissance</span></div>
 
-               <a class="certificate-link" href="https://drive.google.com/file/d/1tgFNvnVC_THvsom8gumJomf7IH5f_I8c/view?usp=drive_link" target="_blank" rel="noopener noreferrer" <span>Web Application Security </span>↗</span></a>
+          <a class="certificate-link" href="https://drive.google.com/file/d/1tgFNvnVC_THvsom8gumJomf7IH5f_I8c/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><strong>Web Application Security Certificate ↗</strong></a>
          
         </article>
 
