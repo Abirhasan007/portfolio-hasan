@@ -99,6 +99,24 @@
       background: #ffffff08
     }
 
+
+    .cv-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      cursor: pointer;
+      font: inherit;
+      transition: border-color .2s, color .2s, transform .2s;
+      white-space: nowrap;
+    }
+    .cv-download:hover {
+      color: #67d8f2;
+      border-color: rgba(103, 216, 242, .65);
+      transform: translateY(-1px);
+    }
+    .cv-download .dot { flex: 0 0 auto; }
+
     .dot {
       display: inline-block;
       width: 7px;
@@ -2555,7 +2573,10 @@
     <a class="brand" href="#top">S.R<span>.</span>Hasan</a>
     <nav class="navlinks" aria-label="Main navigation"><a href="#work">Expertise</a><a href="#about">About Me</a><a
         href="#experience">Experience</a><a href="#academics">Education</a><a href="#projects">Projects</a><a href="#cybersecurity">Cybersecurity</a><a href="#contact">Contact</a></nav>
-    <div class="status"><i class="dot"></i>IT PROFESSIONALS/ DHAKA</div>
+    <a class="status cv-download" href="https://drive.google.com/file/d/1Rm1opj1kWBeO-jXmh0umQkgFXCSEHgrI/view?usp=drive_link" download aria-label="Download S. R. Hasan's CV">
+
+      <i class="dot"></i><span>DOWNLOAD MY CV</span><span aria-hidden="true">↓</span>
+    </a>
   </header>
   <main id="top">
     <section class="hero wrap">
